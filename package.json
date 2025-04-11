@@ -17,10 +17,8 @@
   "license": "ISC",
   "author": "Manshi Yadav",
   "type": "commonjs",
-  "main": "app.js",
+  "main": "/frontend/src/app.js",
   "scripts": {
-    "test": "jest",
-    "start": "node app.js", 
-    "build": "nodemon app.js"
+    "test": "jest"
   }
 }
