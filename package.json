@@ -1,0 +1,24 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Backend File",
+  "keywords": [
+    "Attendance",
+    "System"
+  ],
+  "homepage": "https://github.com/manshi413/attendance-backend#readme",
+  "bugs": {
+    "url": "https://github.com/manshi413/attendance-backend/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manshi413/attendance-backend.git"
+  },
+  "license": "ISC",
+  "author": "Manshi Yadav",
+  "type": "commonjs",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest"
+  }
+}
