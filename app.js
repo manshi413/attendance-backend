@@ -9,9 +9,6 @@ const app = express();
 
 // Middleware
 app.use(express.json()); // Parse JSON request bodies
-app.use(cors());         // Enable Cross-Origin Resource Sharing
-
-const cors = require('cors');
 app.use(cors({ origin: 'https://attendance-frontend-dikhzeg4n-manshi-yadavs-projects.vercel.app' }));
 
 // Environment variables
