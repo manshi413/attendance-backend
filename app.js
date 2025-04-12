@@ -11,6 +11,9 @@ const app = express();
 app.use(express.json()); // Parse JSON request bodies
 app.use(cors());         // Enable Cross-Origin Resource Sharing
 
+const cors = require('cors');
+app.use(cors({ origin: 'https://attendance-frontend-dikhzeg4n-manshi-yadavs-projects.vercel.app' }));
+
 // Environment variables
 const PORT = process.env.PORT || 5000; // Default port is 5000 if not provided in .env
 const MONGO_URI = process.env.MONGO_URI; // MongoDB connection string from .env
