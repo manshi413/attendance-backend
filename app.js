@@ -9,7 +9,7 @@ const app = express();
 
 // Middleware
 app.use(express.json()); // Parse JSON request bodies
-app.use(cors({ origin: 'https://attendance-frontend-dikhzeg4n-manshi-yadavs-projects.vercel.app' }));
+app.use(cors({ origin: 'https://attendance-frontend-tau.vercel.app/', credentials: true }));
 
 // Environment variables
 const PORT = process.env.PORT || 5000; // Default port is 5000 if not provided in .env
