@@ -27,6 +27,7 @@ app.get('/', (req, res) => {
 
 // Example of an attendance route (to be expanded as needed)
 app.use('/api/attendance', require('./routes/attendance'));
+app.use('/api/auth', require('./routes/auth'));
 
 // Start the server
 app.listen(PORT, () => {
