@@ -7,9 +7,31 @@ require('dotenv').config(); // To use environment variables from a .env file
 // Initialize the Express application
 const app = express();
 
+app.use(cors({
+  origin: 'https://yourdomain.com', // Your frontend URL
+  credentials: true
+}));
+
 // Middleware
-app.use(express.json()); // Parse JSON request bodies
-app.use(cors({ origin: 'https://attendance-frontend-tau.vercel.app/', credentials: true }));
+// app.use(express.json()); // Parse JSON request bodies
+// app.use(cors({
+//   origin: 'https://attendance-frontend-tau.vercel.app/',
+//   credentials: true,
+//   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+//   allowedHeaders: ['Content-Type', 'Authorization'],
+//   preflightContinue: false,
+//   optionsSuccessStatus: 204
+// }));
+
+// Middleware to handle OPTIONS preflight requests
+app.options('*', cors({
+  origin: 'https://attendance-frontend-tau.vercel.app/',
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  preflightContinue: false,
+  optionsSuccessStatus: 204
+}));
 
 // Environment variables
 const PORT = process.env.PORT || 5000; // Default port is 5000 if not provided in .env
